@@ -416,6 +416,17 @@ header h1 {
 .blog-post:hover {
     transform: scale(1.05);
 }
+.blog-post a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    background-color:blueviolet;
+    padding: 10px;
+    border-radius: 10px;
+}
+.blog-post a:hover{
+    background-color: black;
+}
 /*contact*/
 /* Add this to your style.css */
 .contact-section {
