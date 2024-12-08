@@ -99,6 +99,9 @@ button{
         transition: background-color 0.3s;
     }
 }
+.cart-button{
+    display: none;
+}
 @media (max-width: 768px) {
     header {
         padding: 20px 5%;
