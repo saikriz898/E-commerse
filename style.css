@@ -99,9 +99,6 @@ button{
         transition: background-color 0.3s;
     }
 }
-.cart-button{
-    display: none;
-}
 @media (max-width: 768px) {
     header {
         padding: 20px 5%;
@@ -193,66 +190,85 @@ header h1 {
     background-color: darkviolet;
 }
 /*shop*/
-.shop-section {
+.shop-section{
     padding: 50px 20px;
     background-color: #f9f9f9;
-    text-align: center;
+    text-align: center; 
     cursor: pointer;
 }
-
-.shop-section h2 {
+.shop-section h2{
     font-size: 36px;
     margin-bottom: 20px;
 }
-
-.shop-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.products{
+    display: grid;
     gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-
-.shop1-content {
+.product{
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    width: 300px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
-
-.shop1-content img {
+.product img{
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-.shop1-content h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.shop1-content p {
-    font-size: 12px;
-    color: #333;
-    margin-bottom: 20px;
-}
-.shop1-content:hover {
+.product:hover{
     transform: scale(1.05);
 }
-.shop1-content a{
+.product h3{
+    margin-bottom: 10px;
+}
+.product p{
+    margin-bottom: 10px;
+}
+.product a{
     text-decoration: none;
     color: white;
     transition: color 0.3s;
-    background-color:blueviolet;
+    background-color:orangered;
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
-.shop1-content a:hover{
-    background-color: black;
+.product a:hover{
+    transition: color 0.3s;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (min-width:0) and (max-width: 768px){
+    .products{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .product img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .product h3{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .product p{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .product a{
+        padding: 5px;
+    }
+    
 }
 /*about*/
 .about-content{
@@ -391,6 +407,28 @@ header h1 {
 }
 .blog-post a:hover{
     background-color: black;
+}
+@media (min-width:0) and (max-width: 768px){
+    .blog-posts{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .blog-post img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .blog-post h3{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .blog-post p{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .blog-post a{
+        padding: 5px;
+    }
 }
 /*contact*/
 /* Add this to your style.css */
