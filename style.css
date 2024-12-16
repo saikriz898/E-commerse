@@ -408,6 +408,14 @@ header h1 {
 .blog-post a:hover{
     background-color: black;
 }
+.applebtn{
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
 @media (min-width:0) and (max-width: 768px){
     .blog-posts{
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
