@@ -103,52 +103,36 @@ button{
     header {
         padding: 20px 5%;
     }
-header h1 {
-    font-size: 25px;
-}
+    header h1 {
+        font-size: 25px;
+    }
     .toggle-button {
         display: block;
         cursor: pointer;
         position: relative;
     }
-    .nav-menu {
-        display: none; /* Hide navigation menu by default */
-        flex-direction: column;
+    nav ul {
+        flex-direction: row;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        background-color: #222;
+        padding: 10px 0;
     }
-
-    .nav-menu.active {
-        display: flex; /* Show navigation menu when active */
+    nav ul li {
+        margin: 10px 0;
     }
-
-    .nav-menu ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 18px;
     }
-
-    .nav-menu ul li {
-        margin: 20px 0;
-        text-align: center;
+    .toggle-button::before {
+        content: '\2630';
+        font-size: 30px;
     }
-
-    .toggle-button.active .open-icon {
-        display: none;
-    }
-
-    .toggle-button.active .close-icon {
-        display: block;
-        transition: transform 0.3s;
-    }
-    .cart-button{
-        display: none;
-    }
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-    }
-    .close-icon {
-        display: none;
+    .toggle-button.active + ul {
+        display: flex;
     }
 }
 /* Add this to your style.css */
@@ -188,6 +172,77 @@ header h1 {
 
 .shop-now-button:hover {
     background-color: darkviolet;
+}
+/*about*/
+.about-content{
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-content h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-content p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testonionals{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px;
+    max-width: 1000px;
+    max-height: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.testonional
+    {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+    
+.testonional img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.testonional h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-top: 2px solid black;
+}
+
+.testonional p{
+    border-top: 2px solid black;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.testonional:hover{
+    transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+   .about-content p {
+    font-size: fit-content;
+    }
 }
 /*shop*/
 .shop-section{
@@ -272,81 +327,11 @@ header h1 {
         font-size: 14px;
         margin-bottom: 10px;
     }
-    .product a{
+    .product-button a{
         padding: 5px;
+        font-size: 10px;
     }
     
-}
-/*about*/
-.about-content{
-    text-align: center;
-    padding: 20px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.about-content h1{
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.about-content p{
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.testonionals{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 20px;
-    max-width: 1000px;
-    max-height: fit-content;
-    margin: 0 auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-.testonional
-    {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-        cursor: pointer;
-    }
-    
-.testonional img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.testonional h3{
-    font-size: 24px;
-    margin-bottom: 10px;
-    border-top: 2px solid black;
-}
-
-.testonional p{
-    border-top: 2px solid black;
-    font-size: 14px;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-.testonional:hover{
-    transform: scale(1.05);
-}
-@media screen and (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-   .about-content p {
-    font-size: fit-content;
-    }
 }
 /*blog*/
 /* Add this to your style.css */
@@ -388,14 +373,16 @@ header h1 {
 }
 
 .blog-post h3 {
-    font-size: 24px;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
 .blog-post p {
     font-size: 12px;
+    list-style-type: style auto;;
     color: #333;
     margin-bottom: 20px;
+    border-top: 2px solid black;
 }
 
 .blog-post .read-more {
@@ -403,12 +390,13 @@ header h1 {
     background-color: blueviolet;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .blog-post .read-more:hover {
-    background-color: darkviolet;
+    background-color: black;
+    color: 222;
+    transition: background-color 0.3s;
 }
 
 .blog-post:hover {
@@ -424,14 +412,6 @@ header h1 {
 }
 .blog-post a:hover{
     background-color: black;
-}
-.applebtn{
-    background-color: #000;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
 }
 @media (min-width:0) and (max-width: 768px){
     .blog-posts{
