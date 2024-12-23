@@ -233,19 +233,26 @@ header h1 {
 .product p{
     margin-bottom: 10px;
 }
-.product a{
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-    background-color:orangered;
+.product-button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    scroll-behavior: smooth;
+}
+.product-button a{
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 10px;
-}
-.product a:hover{
-    transition: color 0.3s;
+    font-size: 10px;
+    background-color: hsl(16, 100%, 50%);
     color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.product-button a:hover{
+    background-color:blueviolet;
+    color: #ffffff;
+    transition:background-color 0.3s;
 }
 @media (min-width:0) and (max-width: 768px){
     .products{
@@ -274,7 +281,7 @@ header h1 {
 .about-content{
     text-align: center;
     padding: 20px;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -291,21 +298,28 @@ header h1 {
 
 .testonionals{
     display: grid;
-    gap:20px;
+    gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 20px;
     max-width: 1000px;
+    max-height: fit-content;
     margin: 0 auto;
-    background-color: white;
-    transition: transform 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-bottom: 20px;
     cursor: pointer;
 }
-.testonional{
-    cursor: pointer;
-}
+.testonional
+    {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+    
 .testonional img{
     width: 100%;
     height: auto;
@@ -316,11 +330,14 @@ header h1 {
 .testonional h3{
     font-size: 24px;
     margin-bottom: 10px;
+    border-top: 2px solid black;
 }
 
 .testonional p{
+    border-top: 2px solid black;
     font-size: 14px;
     margin-bottom: 10px;
+    line-height: 1.5;
 }
 .testonional:hover{
     transform: scale(1.05);
@@ -328,7 +345,7 @@ header h1 {
 @media screen and (max-width: 768px) {
     /* Adjust styles for smaller screens */
    .about-content p {
-    font-size: 14px;
+    font-size: fit-content;
     }
 }
 /*blog*/
@@ -512,7 +529,23 @@ footer p{
     width: 100%;
 }
 
+.add-to-cart{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    background-color:hsl(16, 100%, 50%);
+    padding: 4px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart:hover{
+    background-color: rgb(230, 136, 81);
+    color: #ffffff;
+    transition:background-color 0.3s;
+}
+
 .footer p {
     margin-bottom: 0;
-
 }
