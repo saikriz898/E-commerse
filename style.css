@@ -237,7 +237,7 @@ header h1 {
     text-decoration: none;
     color: white;
     transition: color 0.3s;
-    background-color:orangered;
+    background-color:hsl(16, 100%, 50%);
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -512,7 +512,23 @@ footer p{
     width: 100%;
 }
 
+.add-to-cart{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    background-color:hsl(16, 100%, 50%);
+    padding: 4px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart:hover{
+    background-color: rgb(230, 136, 81);
+    color: #ffffff;
+    transition:background-color 0.3s;
+}
+
 .footer p {
     margin-bottom: 0;
-
 }
