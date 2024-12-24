@@ -106,6 +106,7 @@ button{
     header h1 {
         font-size: 25px;
         padding-left: 110px;
+        padding-right: 0px;
     }
     .toggle-button {
         display: block;
