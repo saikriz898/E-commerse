@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 /*header*/
 header{
@@ -108,22 +108,4 @@ button{
     .toggle-button.active + ul {
         display: flex;
     }
-}
-.heading{
-    text-align: center;
-    margin: 20px 0;
-    padding: 40px;
-    font-size: 45px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: lightblue;
-    font-style: italic;
-}
-.heading h1{
-    font-size: 45px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: lightblue;
-    font-style: italic;
-}
-@media (max-width: 768px) {
-
 }

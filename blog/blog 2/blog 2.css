@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 /*header*/
 header{
@@ -73,54 +73,39 @@ button{
         transition: background-color 0.3s;
     }
 }
-@media (min-width: 0) and (max-width: 1024px) {
-header {
-    padding: 20px 5%;
-}
-header h1 {
-    font-size: 25px;
-    padding-left: 110px;
-}
-.toggle-button {
-    display: block;
-    cursor: pointer;
-}
-nav ul {
-    flex-direction: row;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #222;
-    padding: 10px 0;
-}
-nav ul li {
-    margin: 10px 0;
-}
-nav ul li a {
-    padding: 10px 20px;
-    font-size: 20px;
-}
-.toggle-button::before {
-    content: '\2630';
-    font-size: 30px;
-}
-.toggle-button.active + ul {
-    display: flex;
-}
-}
-.heading{
-    text-align: center;
-    margin: 20px 0;
-    padding: 40px;
-    font-size: 45px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: lightblue;
-    font-style: italic;
-}
-@media (max-width: 768px) {
-    .heading {
-        font-size: 25px;
+@media (min-width: 0) and (max-width: 1024px){
+    header {
+        padding: 20px 5%;
     }
-    
+    header h1 {
+        font-size: 25px;
+        padding-left: 110px;
+    }
+    .toggle-button {
+        display: block;
+        cursor: pointer;
+    }
+    nav ul {
+        flex-direction: row;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        padding: 10px 0;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    .toggle-button::before {
+        content: '\2630';
+        font-size: 30px;
+    }
+    .toggle-button.active + ul {
+        display: flex;
+    }
 }
