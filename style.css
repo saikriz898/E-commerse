@@ -105,6 +105,7 @@ button{
     }
     header h1 {
         font-size: 25px;
+        padding-left: 110px;
     }
     .toggle-button {
         display: block;
@@ -125,7 +126,7 @@ button{
     }
     nav ul li a {
         padding: 10px 20px;
-        font-size: 14px;
+        font-size: 10px;
     }
     .toggle-button::before {
         content: '\2630';

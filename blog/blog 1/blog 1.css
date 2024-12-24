@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #222;
+    background-color: black;
 }
 /*header*/
 header{
@@ -13,7 +13,7 @@ header{
     align-items: center;
     padding: 10px 20px;
     padding: 30px;
-    background-color: #000;
+    background-color: #222;
     position: relative;
 }
 .toggle-button{
@@ -79,6 +79,7 @@ button{
     }
     header h1 {
         font-size: 25px;
+        padding-left: 110px;
     }
     .toggle-button {
         display: block;
@@ -98,7 +99,7 @@ button{
     }
     nav ul li a {
         padding: 10px 20px;
-        font-size: 10px;
+        font-size: 20px;
     }
     .toggle-button::before {
         content: '\2630';
