@@ -86,17 +86,23 @@ nav ul li a{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-button{
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    &:hover{
-        background-color: blueviolet;
-        transition: background-color 0.3s;
+.active{
+    display: flex;
+    color: bisque;
+    box-shadow: #ddd;
+    &:hover::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        bottom: -5px;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+    }
+    &:hover {
+        transition: color 0.3s;
     }
 }
 @media (min-width: 0) and (max-width: 1024px){
@@ -502,32 +508,49 @@ footer p{
 }
 /* Add this to your style.css */
 /*footer*/
-
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    width: 100%;
 }
 
-.add-to-cart{
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-    background-color:hsl(16, 100%, 50%);
-    padding: 4px;
-    border-radius: 10px;
-    margin-top: 10px;
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
-.add-to-cart:hover{
-    background-color: rgb(230, 136, 81);
-    color: #ffffff;
-    transition:background-color 0.3s;
+.footer-section p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-
-.footer p {
-    margin-bottom: 0;
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .footer-content {
+        flex-direction: row;
+        font-size: 14px;
+    }
+    .footer-section {
+        margin: 10px 0;
+    }
+    
 }

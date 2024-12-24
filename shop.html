@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="shop page/shop.css">
+    <link rel="stylesheet" href="css/shop.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <header id="head" class="head">
-        <h1>Techspot Mobile</h3>
-        <button type="button" class="cart-button"><i class='bx bx-cart'></i></button>
+        <h1>Techspot Mobile</h1>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a  class="active"  href="shop.html" class="dropbtn">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+        </nav>
     </header>
+    <section id="home" class="home-section">
+        <div class="home-content">
+    </section>
     <section id="shop" class="shop-section">
-        
-        <h2>Mobile Phone</h2>
-        <h2>Apple</h2>
+        <h2><i class='bx bx-mobile'></i>Mobile Phone </h2>
+        <h2><i class='bx bxl-apple'></i>Apple</h2>
         <div id="apple">
             <div class="products">
                 <div class="product">
@@ -31,11 +42,11 @@
                 
                 <div class="product">
                     <img src="Images/Iphone/iphone 16 plus.webp" alt="iPhone 16 plus">
-                    <h3>iPhone 16 <br>plus</h3>
+                    <h3>iPhone 16 plus</h3>
                     <p>From ₹89900.00 to 119900.00</p>
                     <div class="product-button">
                         <a href="" class="view-product-button">Add To Cart</a>
-                        <a href="l" class="view-product-button">Buy now</a>
+                        <a href="" class="view-product-button">Buy now</a>
                     </div>
                 </div>
                 <div class="product">
@@ -50,7 +61,7 @@
                 </div>
                 <div class="product">
                     <img src="Images/Iphone/iphone 15 plus.webp" alt="iphone 15 Plus">
-                    <h3>iPhone 15 <br>Plus</h3>
+                    <h3>iPhone 15 Plus</h3>
                     <p>From ₹69900.00
                         ₹109900.00</p>
                     <div class="product-button">
@@ -61,7 +72,7 @@
             </div>
     </div>
         </div>
-        <h2>Samsung</h2>
+        <h2><i class="fi fi-brands-samsung"></i>Samsung</h2>
         <div id="samsung">
             <div class="products">
                 <div class="product">
@@ -108,5 +119,10 @@
             </div>
         </div>
 </section>
+<footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Techspot Mobiles. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
