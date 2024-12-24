@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    background-color: #222;
 }
 /*header*/
 header{
@@ -13,7 +13,7 @@ header{
     align-items: center;
     padding: 10px 20px;
     padding: 30px;
-    background-color: #222;
+    background-color: #000;
     position: relative;
 }
 .toggle-button{
@@ -73,56 +73,39 @@ button{
         transition: background-color 0.3s;
     }
 }
-@media (max-width: 768px) {
+@media (min-width: 0) and (max-width: 1024px){
     header {
         padding: 20px 5%;
     }
-header h1 {
-    font-size: 25px;
-}
+    header h1 {
+        font-size: 25px;
+    }
     .toggle-button {
         display: block;
         cursor: pointer;
-        position: relative;
     }
-    .nav-menu {
-        display: none; /* Hide navigation menu by default */
-        flex-direction: column;
+    nav ul {
+        flex-direction: row;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        background-color: #222;
+        padding: 10px 0;
     }
-
-    .nav-menu.active {
-        display: flex; /* Show navigation menu when active */
+    nav ul li {
+        margin: 10px 0;
     }
-
-    .nav-menu ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 10px;
     }
-
-    .nav-menu ul li {
-        margin: 20px 0;
-        text-align: center;
+    .toggle-button::before {
+        content: '\2630';
+        font-size: 30px;
     }
-
-    .toggle-button.active .open-icon {
-        display: none;
-    }
-
-    .toggle-button.active .close-icon {
-        display: block;
-        transition: transform 0.3s;
-    }
-    .cart-button{
-        display: none;
-    }
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-    }
-    .close-icon {
-        display: none;
+    .toggle-button.active + ul {
+        display: flex;
     }
 }
 .heading{
@@ -133,4 +116,13 @@ header h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: lightblue;
     font-style: italic;
+}
+.heading h1{
+    font-size: 45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightblue;
+    font-style: italic;
+}
+@media (max-width: 768px) {
+
 }
