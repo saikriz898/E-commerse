@@ -164,12 +164,14 @@ button{
     padding: 10px 20px;
     color: white;
     text-decoration: none;
-    background-color: lightblue;
     border-radius: 10px;
-    box-shadow: 0 2px 5px lightblue;
+    box-shadow: 0 2px 5px white;
     transition: background-color 0.3s;
-    background:transparent ;
-    padding: 10px 20px;
+    background:transparent;
+}
+.shop-now-button:hover{
+    background-color: blueviolet;
+    transition: background-color 0.3s;
 }
 /*about*/
 .about-content{
