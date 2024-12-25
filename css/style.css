@@ -63,33 +63,17 @@ nav ul li a{
         transition: color 0.3s;
     }
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    min-width: 160px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 .active{
     display: flex;
-    color: bisque;
-    box-shadow: #ddd;
+    color: burlywood;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-style: italic;
     &:hover::after{
         content: '';
         position: absolute;
@@ -105,13 +89,22 @@ nav ul li a{
         transition: color 0.3s;
     }
 }
+button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color:#222;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+}
 @media (min-width: 0) and (max-width: 1024px){
     header {
         padding: 20px 5%;
     }
     header h1 {
         font-size: 25px;
-        padding-left: 110px;
         padding-right: 0px;
     }
     .toggle-button {
@@ -142,8 +135,11 @@ nav ul li a{
     .toggle-button.active + ul {
         display: flex;
     }
+    .active{
+        font-size: 10px;
+        display: flex;
+    }
 }
-/* Add this to your style.css */
 .home-section {
     display: flex;
     justify-content: center;
