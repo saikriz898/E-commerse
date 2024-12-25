@@ -235,6 +235,9 @@ nav ul li a{
     background-color: black;
 }
 @media (min-width:0) and (max-width: 768px){
+    .blog-section h2{
+        padding: 40px;
+    }
     .blog-posts{
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
@@ -255,4 +258,12 @@ nav ul li a{
     .blog-post a{
         padding: 5px;
     }
+}
+/*footer*/
+footer{
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
 }

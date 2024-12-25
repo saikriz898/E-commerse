@@ -219,8 +219,22 @@ nav ul li a{
     transform: scale(1.05);
 }
 @media screen and (max-width: 768px) {
-    /* Adjust styles for smaller screens */
+    .about-content h1 {
+        padding: 80px;
+    font-size: 30px;
+    }
+    .about-content p {
+    font-size: 16px;
+    }
    .about-content p {
     font-size: fit-content;
     }
+}
+/*footer*/
+footer{
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
 }
