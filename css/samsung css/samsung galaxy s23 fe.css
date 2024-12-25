@@ -46,3 +46,68 @@ button{
         padding-right: 0px;
     }
 }
+
+.samsung-galaxy-s23-fe{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    float: left;
+}
+
+.samsung-galaxy-s23-fe1{
+    display: flex;
+    margin-top: 70px;
+    margin-left: 250px;
+    float: left;
+}
+
+.spec{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 50px;
+    float: left;
+}
+
+.spec{
+    display: flex;
+    margin-top: 0px;
+    margin-left: 500px;
+    float: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 50px;
+    text-align: left;
+    position: absolute;
+    right: 20%;
+    bottom: 55%;
+    left: 16%;
+    margin top: 100%;
+}
+
+.related{
+    margin-top: 650px;
+    margin-left: 50px;
+}
+
+.related-products{
+    margin-top: 50px;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.imageS23ultra{
+    margin-top: 7px;
+    margin-left: 63px;
+}
+
+.imageS24fe{
+    margin-top: 7px;
+    margin-left: 50px;
+    
+}
+
+.images24ultra{
+    margin-top: 7px;
+    margin-left: 50px;
+}
