@@ -70,16 +70,11 @@ button{
 
 .spec{
     display: flex;
-    margin-top: 0px;
-    margin-left: 500px;
-    float: 100px;
+    margin-top: 100px;
+    margin-left: 50px;
+    float: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 50px;
-    text-align: left;
-    position: absolute;
-    right: 20%;
-    bottom: 55%;
-    left: 16%;
 }
 
 .related{
