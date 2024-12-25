@@ -1,9 +1,3 @@
-const toggleButton = document.getElementById('toggle-button');
-const navMenu = document.getElementById('nav-menu');
-toggleButton.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    toggleButton.classList.toggle('active');
-});
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
