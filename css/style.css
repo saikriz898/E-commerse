@@ -140,42 +140,36 @@ button{
         display: flex;
     }
 }
-.home-section {
+.home-section{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: center;
+    height: 90vh;
+    background-image: url(../Images/image/computer-mouse-paper-bags-blue-background-top-view_169016-43523.avif);
     color: white;
+    text-align: center;
 }
-.home-content {
-    max-width: 600px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.home-content h2 {
+.home-section h2{
     font-size: 36px;
     margin-bottom: 20px;
+    transform:scaleX(1.2);
+    text-transform: capitalize;
+    color: whitesmoke;
 }
-
-.home-content p {
-    font-size: 18px;
+.home-section p{
+    font-size: 16px;
     margin-bottom: 20px;
 }
-
-.shop-now-button {
+.shop-now-button{
     padding: 10px 20px;
-    background-color: blueviolet;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px lightblue;
     transition: background-color 0.3s;
-}
-
-.shop-now-button:hover {
-    background-color: darkviolet;
+    background:transparent ;
+    padding: 10px 20px;
 }
 /*about*/
 .about-content{
