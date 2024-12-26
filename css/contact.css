@@ -124,59 +124,104 @@ button{
         font-size: 10px;
     }
 }
-main {
-    padding: 2rem;
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
-.contact-section, .shop-info, .map-section {
-    background-color: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding: 30px;
 }
 
-.contact-form .form-group {
-    margin-bottom: 1rem;
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 0.5rem;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-.submit-button {
-    background-color: #ff6f61;
+.contact-form button {
+    border-radius: 5px;
+    font-size: 14px;
+    background-color:color-mix(in srgb, black 30%, red 70%);
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
 }
 
-.submit-button:hover {
-    background-color: #ff3b2f;
-    transform: scale(1.05);
+.contact-form button:hover {
+    background-color:#222;
 }
-
-.submit-button:active {
-    background-color: #e6392f;
-    transform: scale(1);
+@media (min-width: 0) and (max-width: 1024px){
+    .contact-section {
+        padding: 20px 5%;
+    }
+    .contact-section h2{
+        font-size: 25px;
+        margin: 50px;
+    }
+    .contact-container {
+        gap: 20px;
+    }
+    .contact-info {
+        max-width: 100%;
+    }
+    .contact-form {
+        max-width: 100%;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
 }
-
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #222;
+    color: white;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 20px;
+    padding: 20px;
 }

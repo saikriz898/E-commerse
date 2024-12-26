@@ -257,6 +257,29 @@ button span{
 }
 @media screen and (max-width: 768px) {
     /* Adjust styles for smaller screens */
+    .about-content h1 {
+        font-size: 24px;
+    }
+    .about-content p {
+        font-size: 16px;
+    }
+    .testonionals {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .testonional img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .testonional h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .testonional p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
    .about-content p {
     font-size: fit-content;
     }
@@ -351,7 +374,6 @@ button span{
     
 }
 /*blog*/
-/* Add this to your style.css */
 .blog-section {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -455,7 +477,6 @@ button span{
     
 }
 /*contact*/
-/* Add this to your style.css */
 .contact-section {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -465,46 +486,91 @@ button span{
 .contact-section h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    padding: 30px;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    max-width: 400px;
     text-align: left;
 }
 
-.form-group {
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-.form-group label {
+.contact-form {
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
-.form-group input,
-.form-group textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-.submit-button {
-    padding: 10px 20px;
-    background-color: blueviolet;
+.contact-form button {
+    border-radius: 5px;
+    font-size: 14px;
+    background-color:color-mix(in srgb, black 30%, red 70%);
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.3s;
 }
 
-.submit-button:hover {
-    background-color: darkviolet;
+.contact-form button:hover {
+    background-color:#222;
+}
+@media (min-width: 0) and (max-width: 1024px){
+    .contact-section {
+        padding: 20px 5%;
+    }
+    .contact-section h2{
+        font-size: 25px;
+        margin: 50px;
+    }
+    .contact-container {
+        gap: 20px;
+    }
+    .contact-info {
+        max-width: 100%;
+    }
+    .contact-form {
+        max-width: 100%;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
 }
 footer{
     background-color: #333;
@@ -517,7 +583,6 @@ footer{
 footer p{
     margin-bottom: 0;
 }
-/* Add this to your style.css */
 /*footer*/
 footer {
     background-color: #222;
