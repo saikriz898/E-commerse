@@ -21,106 +21,18 @@
         </nav>
         <button type="button"><i class='bx bx-shopping-bag'></i></button>
     </header>
-    <section id="shop" class="shop-section">
-        <h2><i class='bx bx-mobile'></i>Mobile Phone </h2>
-        <h2><i class='bx bxl-apple'></i>Apple</h2>
-        <div id="apple">
-            <div class="products">
-                <div class="product">
-                    <img src="Images/Iphone/iphone-16-pro max.webp" alt="iPhone 16 Pro Max">
-                    <h3>iPhone 16 Pro Max</h3>
-                    <p>
-                        From ₹144900.00 to ₹169900.00</p>
-                    <div class="product-button">
-                        <a href="">Add to cart<i class='bx bx-shopping-bag'></i></a>
-                        <a href="iphone 16 pro max.html" class="view-product-button">Buy now<i class='bx bx-chevrons-right'></i></a>
-                    </div>
-                </div>
-                
-                <div class="product">
-                    <img src="Images/Iphone/iphone 16 plus.webp" alt="iPhone 16 plus">
-                    <h3>iPhone 16 plus</h3>
-                    <p>From ₹89900.00 to 119900.00</p>
-                    <div class="product-button">
-                        <a href="">Add to cart<i class='bx bx-shopping-bag'></i></a>
-                        <a href="iphone 16 plus.html" class="view-product-button">Buy now<i class='bx bx-chevrons-right'></i></a>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="Images/Iphone/iPhone_15_Pro_Max.webp" alt="iPhone 15 Pro Max">
-                    <h3>iPhone 15 Pro Max</h3>
-                    <p>
-                        From ₹129,800 to ₹193,500                    </p>
-                    <div class="product-button">
-                        <a href="">Add to cart<i class='bx bx-shopping-bag'></i></a>
-                        <a href="iphone 15 pro max.html" class="view-product-button">Buy now<i class='bx bx-chevrons-right'></i></a>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="Images/Iphone/iphone 15 plus.webp" alt="iphone 15 Plus">
-                    <h3>iPhone 15 Plus</h3>
-                    <p>From ₹69900.00
-                        ₹109900.00</p>
-                    <div class="product-button">
-                        <a href="">Add to cart<i class='bx bx-shopping-bag'></i></a>
-                        <a href="iphone 15 plus.html" class="view-product-button">Buy now<i class='bx bx-chevrons-right'></i></a>
-                    </div>
-                </div>
-            </div>
-    </div>
+    <div class="container">
+        <div class="list"></div>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <div class="listcard"></div>
+            <p>Total Price: $<span class="total">0</span></p>
+            <p>Total Quantity: <span class="quantity">0</span></p>
+            <button class="continueShopping" onclick="continueShopping()">Continue Shopping</button>
         </div>
-        <h2><i class="fi fi-brands-samsung"></i>Samsung</h2>
-        <div id="samsung">
-            <div class="products">
-                <div class="product">
-                    <img src="Images/samsung/samsung galaxy s24 ultra.jpg" alt="Samsung Galaxy S21 Ultra">
-                    <h3>Samsung Galaxy S24 Ultra</h3>
-                    <p>
-                        From ₹13555.44 to ₹16888.78 </p>
-                        <div class="product-button">
-                            <a href="">Add to cart<i class='bx bx-shopping-bag'></i></a>
-                            <a href="samsung galaxy s24 ultra.html"class="view-product-button">Buy now<i class='bx bx-chevrons-right'></i></a>
-                        </div>
-
-            </div>
-            <div class="product">
-                <img src="Images/samsung/samsung galaxy s24 FE.jfif" alt="Samsung Galaxy S21 Plus">
-                <h3>Samsung Galaxy S24 FE</h3>
-                <p>
-                    From  ₹58,500 to ₹65,999</p>
-                    <div class="product-button">
-                        <a href="">Add to cart<i class='bx bx-shopping-bag'></i></a>
-                        <a href="samsung galaxy s24 fe.html" class="view-product-button">Buy now<i class='bx bx-chevrons-right'></i></a>
-                    </div>
-            </div>
-            <div class="product">
-                <img src="Images/samsung/samsung galaxy s23 ultra.webp" alt="Samsung Galaxy S21">
-                <h3>Samsung Galaxy S23 Ultra</h3>
-                <p>
-                   From ₹109999.00 to ₹119999.00  </p>
-                    <div class="product-button">
-                        <a href="">Add to cart<i class='bx bx-shopping-bag'></i></a>
-                        <a href="samsung galaxy s23 ultra.html" class="view-product-button">Buy now<i class='bx bx-chevrons-right'></i></a>
-                    </div>
-            </div>
-            <div class="product">
-                <img src="Images/samsung/Samsung-Galaxy-S23-FE.jpg" alt="Samsung Galaxy S20 FE">
-                <h3>Samsung Galaxy S23 FE</h3>
-                <p>
-                From ₹54999.00 to ₹57999.00</p>
-                <div class="product-button">
-                    <a href="">Add to cart<i class='bx bx-shopping-bag'></i></a>
-                    <a href="samsung galaxy s23 fe.html" class="view-product-button">Buy now<i class='bx bx-chevrons-right'></i></a>
-                </div>
-             </div>
-            </div>
-            </div>
-        </div>
-</section>
-<footer>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Techspot Mobiles. All rights reserved.</p>
+        <button class="shopping" onclick="openShoppingCart()">View Cart</button>
+        <button class="closeshopping" onclick="closeShoppingCart()">Close Cart</button>
     </div>
-</footer>
+<script src="script.js"></script>
 </body>
 </html>
