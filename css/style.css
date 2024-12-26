@@ -429,27 +429,30 @@ button span{
     background-color: red;
     transition: background-color 0.3s;
 }
-@media (min-width:0) and (max-width: 768px){
-    .blog-posts{
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+@media (min-width: 0) and (max-width: 1024px){
+    .blog-section h2{
+        padding-top: 40px;
     }
-    .blog-post img{
+    .blog-posts {
+        flex-direction: column;
+    }
+    .blog-post {
         width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 10px;
+        padding: 10px;
     }
-    .blog-post h3{
-        font-size: 18px;
-        margin-bottom: 10px;
+    .blog-post img {
+        margin-bottom: 5px;
     }
-    .blog-post p{
+    .blog-post h3 {
         font-size: 14px;
-        margin-bottom: 10px;
     }
-    .blog-post a{
-        padding: 5px;
+    .blog-post p {
+        font-size: 12px;
     }
+    .blog-post .read-more {
+        font-size: 12px;
+    }
+    
 }
 /*contact*/
 /* Add this to your style.css */
