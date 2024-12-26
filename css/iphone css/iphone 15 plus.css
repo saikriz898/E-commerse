@@ -216,6 +216,28 @@ button{
     background-color: black;
     color: white;
 }
+@media (min-width: 0) and (max-width: 1024px){
+    .products{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .product{
+        padding: 10px;
+    }
+    .product img{
+        margin-bottom: 5px;
+    }
+    .product h3{
+        font-size: 14px;
+    }
+    .product p{
+        font-size: 12px;
+    }
+    .btn a{
+        padding: 5px;
+        font-size: 10px;
+    }
+    
+}
 footer{
     align-items: center;
     padding: 10px 20px;
