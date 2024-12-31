@@ -36,6 +36,123 @@ button{
     border: none;
     cursor: pointer;
 }
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-style: italic;
+    &:hover::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        bottom: -5px;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+    }
+    &:hover {
+        transition: color 0.3s;
+    }
+}
+.active{
+    display: flex;
+    color: burlywood;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-style: italic;
+    &:hover::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        bottom: -5px;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+    }
+    &:hover {
+        transition: color 0.3s;
+    }
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color:#222;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+button span{
+    font-size: 10px;
+    top: 50%;
+    right: -20px;
+}
+@media (min-width: 0) and (max-width: 1024px){
+    header {
+        padding: 20px 5%;
+    }
+    header h1 {
+        font-size: 25px;
+        padding-right: 0px;
+    }
+    .toggle-button {
+        display: block;
+        cursor: pointer;
+        position: relative;
+    }
+    nav ul {
+        flex-direction: row;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        padding: 10px 0;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .toggle-button::before {
+        content: '\2630';
+        font-size: 30px;
+    }
+    .toggle-button.active + ul {
+        display: flex;
+    }
+    .active{
+        font-size: 10px;
+        display: flex;
+    }
+}
 @media (min-width: 0) and (max-width: 1024px){
     header {
         padding: 20px 5%;

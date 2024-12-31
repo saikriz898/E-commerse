@@ -17,6 +17,8 @@ function clearCart() {
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
     renderCart();
+    document.querySelector('.total').textContent = '0';
+    document.querySelector('.quantity').textContent = '0';
 }
 function continueShopping(){
     document.querySelector('.cart').style.display = 'none';
