@@ -15,7 +15,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a  class="active"  href="shop.html" class="dropbtn">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -23,15 +23,21 @@
     </header>
     <div class="container">
         <div class="list"></div>
+        <section class="cart-section">
         <div class="cart">
             <h2>Shopping Cart</h2>
             <div class="listcard"></div>
-            <p>Total Price: $<span class="total">0</span></p>
-            <p>Total Quantity: <span class="quantity">0</span></p>
-            <button class="clear" onclick="clearCart()">Clear Cart</button>
-            <button class="continueShopping" onclick="continueShopping()">Continue Shopping</button>
+            <div class="cart-summary">
+                <h3>Summary</h3>
+                <p>Total Price: $<span class="total">0</span></p>
+                <p>Total Quantity: <span class="quantity">0</span></p>
+                <button class="clear" onclick="clearCart()">Clear Cart</button>
+                <button class="continueShopping" onclick="continueShopping()">Continue Shopping</button>
+                <button class="closeshopping" onclick="closeShoppingCart()">Close Cart</button>
         </div>
-        <button class="closeshopping" onclick="closeShoppingCart()">Close Cart</button>
+        </div>
+
+    </section>
     </div>
 <script src="asserts/js/shop.js"></script>
 </body>

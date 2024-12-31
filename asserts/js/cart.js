@@ -23,7 +23,7 @@ function continueShopping(){
 }
 
 
-function addToCart(productName, productPrice, productQuantity) {
+function addToCart(productName, productPrice, productQuantity, productImage) {
     let total = document.querySelector('.total').textContent;
     let quantity = document.querySelector('.quantity').textContent;
     total = parseInt(total);
@@ -38,13 +38,14 @@ function addToCart(productName, productPrice, productQuantity) {
     if (existingProduct) {
         existingProduct.quantity += productQuantity;
     } else {
-        cart.push({ name: productName, price: productPrice, quantity: productQuantity });
+        cart.push({ name: productName, price: productPrice, quantity: productQuantity, image: productImage });
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
     renderCart();
     toggleShoppingCart();
 }
+
 function renderCart() {
     let productList = document.querySelector('.listcard');
     productList.innerHTML = '';
@@ -57,7 +58,7 @@ function renderCart() {
 
         let product = document.createElement('div');
         product.classList.add(`product-${item.name.replace(/\s+/g, '-').toLowerCase()}`);
-        product.innerHTML = `<p>${item.name}</p><p>₹${item.price.toLocaleString()}</p><p>Quantity: <span class="product-quantity">${item.quantity}</span></p>`;
+        product.innerHTML = `<img src="asserts/image/${item.image}" alt="${item.name}"><p>${item.name}</p><p>₹${item.price.toLocaleString()}</p><p>Quantity: <span class="product-quantity">${item.quantity}</span></p>`;
         productList.appendChild(product);
     });
 
