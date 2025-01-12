@@ -109,10 +109,8 @@ button span{
         font-size: 25px;
         padding-right: 0px;
     }
-    .toggle-button {
-        display: block;
-        cursor: pointer;
-        position: relative;
+    header img{
+        margin-left: 150px;
     }
     nav ul {
         flex-direction: row;

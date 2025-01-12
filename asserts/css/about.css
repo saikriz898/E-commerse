@@ -109,10 +109,8 @@ button span{
         font-size: 25px;
         padding-right: 0px;
     }
-    .toggle-button {
-        display: block;
-        cursor: pointer;
-        position: relative;
+    header img{
+        margin-left: 150px;
     }
     nav ul {
         flex-direction: row;
@@ -130,13 +128,7 @@ button span{
         padding: 10px 20px;
         font-size: 10px;
     }
-    .toggle-button::before {
-        content: '\2630';
-        font-size: 30px;
-    }
-    .toggle-button.active + ul {
-        display: flex;
-    }
+
     .active{
         font-size: 10px;
         display: flex;
