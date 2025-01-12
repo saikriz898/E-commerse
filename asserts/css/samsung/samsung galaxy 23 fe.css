@@ -25,6 +25,10 @@ header h1{
     font-style: italic;
     letter-spacing: 1px;
 }
+header img{ 
+    width: 150px;
+    height: auto;
+}
 nav ul{
     display: flex;
     justify-content: space-between;
@@ -340,65 +344,6 @@ display: none;
     }
     .btn a{
         padding: 5px;
-        font-size: 10px;
-    }
-    
-}
-.cart {
-    display: none; 
-    position: fixed;
-    top: 20%;
-    right: 0;
-    width: 300px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    z-index: 1000;
-}
-
-.cart h2 {
-    margin-top: 0;
-}
-
-.listcard {
-    max-height: 200px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-}
-
-.total, .quantity {
-    font-weight: bold;
-}
-
-button.clear, button.continueShopping, button.closeshopping {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 15px;
-}
-
-button.clear:hover, button.continueShopping:hover, button.closeshopping:hover {
-    background-color: #0056b3;
-}
-@media (min-width: 0) and (max-width: 1024px){
-    .cart {
-        width: 50%;
-        top: 10%;
-    }
-    .cart h2 {
-        font-size: 20px;
-    }
-    .listcard {
-        max-height: 80px;
-    }
-    button.clear, button.continueShopping, button.closeshopping {
-        size: 10px;
         font-size: 10px;
     }
     

@@ -9,24 +9,21 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
 }
+/*header*/
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    padding: 30px;
     background-color: #222;
     position: relative;
 }
 .toggle-button{
     display: none;
 }
-header h1{
-    color: rgb(226, 160, 18);
-    font-size: 30px;
-    font-weight: bold;
-    font-style: italic;
-    letter-spacing: 1px;
+header img{ 
+    width: 150px;
+    height: auto;
 }
 nav ul{
     display: flex;
@@ -99,6 +96,11 @@ button{
     border: none;
     cursor: pointer;
 }
+button span{
+    font-size: 10px;
+    top: 50%;
+    right: -20px;
+}
 @media (min-width: 0) and (max-width: 1024px){
     header {
         padding: 20px 5%;
@@ -106,6 +108,11 @@ button{
     header h1 {
         font-size: 25px;
         padding-right: 0px;
+    }
+    .toggle-button {
+        display: block;
+        cursor: pointer;
+        position: relative;
     }
     nav ul {
         flex-direction: row;
@@ -122,6 +129,17 @@ button{
     nav ul li a {
         padding: 10px 20px;
         font-size: 10px;
+    }
+    .toggle-button::before {
+        content: '\2630';
+        font-size: 30px;
+    }
+    .toggle-button.active + ul {
+        display: flex;
+    }
+    .active{
+        font-size: 10px;
+        display: flex;
     }
 }
 .contact-section {
