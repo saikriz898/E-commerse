@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart-Page</title>
     <link rel="stylesheet" href="asserts/css/cart.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <header id="head" class="head">
@@ -23,12 +24,14 @@
         <button class="shopping" onclick="toggleShoppingCart()"><i class='bx bx-shopping-bag'></i></button>
     </header>
     <section id="cart" class="cart">
-        <h2>Shopping Cart</h2>
+        <h2 class="head">Shopping Cart</h2>
         <div class="listcard"></div>
-        <p>Total Price: ₹<span class="total">0</span></p>
-        <p>Total Quantity: <span class="quantity">0</span></p>
+        <p class="price">Total Price: ₹<span class="total">0</span></p>
+        <p >Total Quantity: <span class="quantity">0</span></p>
+       <div class="btn">
         <button class="clear" onclick="clearCart()">Clear Cart</button>
         <button class="closeshopping" onclick="closeShoppingCart()">Close Cart</button>
+       </div>
     </section>
     <script src="asserts/js/cart.js"></script>
 </body>
