@@ -1,6 +1,24 @@
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 function toggleShoppingCart() {
-    window.location.href = 'shop.html';
+    const currentPage = window.location.pathname.split('/').pop();
+    const productPages = [
+        'iphone 16 pro max.html',
+        'iphone 16 plus.html',
+        'iphone 15 plus.html',
+        'iphone 15 pro max.html',
+        'samsung galaxy s23 fe.html',
+        'samsung galaxy s24 fe.html',
+        'samsung galaxy s23 ultra.html',
+        'samsung galaxy s24 ultra.html'
+    ];
+
+    if (productPages.includes(currentPage)) {
+        window.location.href = 'cart.html';
+    } else if (currentPage === 'cart.html') {
+        window.location.href = 'shop.html';
+    } else {
+        window.location.href = 'cart.html';
+    }
 }
 function addToCart(productName, productPrice, productImage) {
     const product = { name: productName, price: productPrice, image: productImage, quantity: 1 };
@@ -88,5 +106,22 @@ function clearCart() {
 function closeShoppingCart() {
     window.location.href = 'shop.html';
 }
-
 document.addEventListener('DOMContentLoaded', updateCart);
+let currentSlide = 0;
+
+function moveSlider(direction) {
+    const slider = document.querySelector('.slider');
+    const products = document.querySelectorAll('.product');
+    const totalSlides = products.length;
+    const slideWidth = products[0].offsetWidth;
+
+    currentSlide += direction;
+
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    }
+
+    slider.scrollLeft = currentSlide * slideWidth;
+}

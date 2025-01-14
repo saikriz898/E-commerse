@@ -35,10 +35,14 @@ function updateCart() {
         const div = document.createElement('div');
         div.classList.add('cart-item');
         div.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px;">
+            <img src="${item.image}" alt="${item.name}" style="width: 80px; height: 80px;">
             <span>${item.name}</span>
-            <span>₹${item.price.toFixed(2)}</span>
+            <span style="margin:10px;">₹${item.price.toFixed(2)}</span>
             <span>Quantity: ${item.quantity}</span>
+            <div class="btm">
+            <button class="remove-item" onclick="removeItem('${item.name}')">Remove</button>
+            <button class="view-product" onclick="view('${item.name}')">View Product</button>
+            </div>
         `;
         listcard.appendChild(div);
         total += item.price * item.quantity;
@@ -58,5 +62,41 @@ function clearCart() {
 function closeShoppingCart() {
     document.querySelector('.cart').style.display = 'none';
 }
-
+function removeItem(productName) {
+    const existingProductIndex = cart.findIndex(item => item.name === productName);
+    if (cart[existingProductIndex].quantity > 1) {
+        cart[existingProductIndex].quantity -= 1;
+    } else {
+        cart.splice(existingProductIndex, 1);
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCart();
+}
+function view(productName) {
+    if (productName === 'iPhone 16 Pro Max') {
+        window.location.href = 'iphone 16 pro max.html';
+    } else if (productName === 'iPhone 16 Plus') {
+        window.location.href = 'iphone 16 plus.html';
+    } else if (productName === 'iPhone 15 Plus') {
+        window.location.href = 'iphone 15 plus.html';
+    }
+    else if(productName === 'iPhone 15 Pro Max') {
+        window.location.href = 'iphone 15 pro max.html';
+    }
+    else if(productName === 'Samsung Galaxy S23 FE') {
+        window.location.href = 'samsung galaxy s23 fe.html';
+    }
+    else if(productName === 'Samsung Galaxy S24 FE') {
+        window.location.href = 'samsung galaxy s24 fe.html';
+    }
+    else if(productName === 'Samsung Galaxy S23 Ultra') {
+        window.location.href = 'samsung galaxy s23 ultra.html';
+    }
+    else if(productName === 'Samsung Galaxy S24 Ultra') {
+        window.location.href = 'samsung galaxy s24 ultra.html';
+    }
+    else{
+        window.location.href = 'shop.html';
+    }
+}
 document.addEventListener('DOMContentLoaded', updateCart);
