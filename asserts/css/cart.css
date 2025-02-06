@@ -213,6 +213,31 @@ button span{
     cursor: pointer;
     margin-top: 15px;
 }
+.summary{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.summary p{
+    font-size: 20px;
+}
+.summary button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color:#0056b3;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.summary button:hover {
+    background-color:color-mix(in srgb, blue 50%, red 50%);
+}
 @media (max-width: 768px) {
     .listcard {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
